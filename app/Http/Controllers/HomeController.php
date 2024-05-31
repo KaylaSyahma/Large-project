@@ -17,11 +17,13 @@ class HomeController extends Controller
             if($role_as=='0'){
                 return view('dashboard');
             } else if($role_as=='1'){
-                return view('admin.admin');
+                $users = User::all();
+                return view('admin.admin', compact('users'));
             }
             else{
                 return redirect();
             }
         }
+    
     }
 }

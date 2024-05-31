@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -32,7 +33,13 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
-    Route::get('/dashboard', [HomeController::class, 'index'])->name('admin.dashboard');
+    Route::controller(HomeController::class)->group(function(){
+        Route::get('/dashboard', [HomeController::class, 'index'])->name('admin.dashboard');
+    });
+
+    Route::controller(ArtikelController::class)->group(function(){
+        Route::get('artikel', 'index')->name('admin.artikel');
+    });
 });
 
 require __DIR__.'/auth.php';

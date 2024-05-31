@@ -16,10 +16,16 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(!Auth::user()->role_as == '1'){
-            return redirect('/home')->with('status', 'Acces denied. As you are not Admin');
+
+        if(Auth::check()){
+            if(Auth::user()->role_as == 1){
+                return $next($request);
+            }else{
+                return redirect('/dashboard/user');
+            }
+        }else{
+            return redirect('/login');
         }
-        
         return $next($request);
     }
 }

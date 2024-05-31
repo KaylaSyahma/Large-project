@@ -26,11 +26,6 @@ class AdminMiddleware
         }else{
             return redirect('/login');
         }
-
-        // if (!Auth::check() || Auth::user()->role_as != '1') {
-        //     return redirect('/home')->with('status', 'Access denied. As you are not Admin');
-        // }
-
         return $next($request);
     }
 }

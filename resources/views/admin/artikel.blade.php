@@ -111,8 +111,35 @@
         <!-- Body -->
         <div class="w-full overflow-x-hidden border-t flex flex-col">
             <main class="w-full flex-grow p-6">
-                <h1>Ini Artikel</h1>
+                <div class="w-full mt-12">
+                    <p class="text-xl pb-3 flex items-center">
+                        <i class="fas fa-list mr-3"></i> Semua Artikel
+                    </p>
+                    <div class="bg-white overflow-auto">
+                        <table class="min-w-full bg-white">
+                            <thead class="bg-sidebar text-white">
+                                <tr>
+                                    <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Penerbit</th>
+                                    <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Gambar</th>
+                                    <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Judul</th>
+                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Deskripsi</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-700">
+                                @foreach ($users as $user)
+                                <tr>
+                                    <td class="w-1/3 text-left py-3 px-4">{{ $user->name }}</td> <!--Ini Buat Image-->
+                                    <td class="w-1/3 text-left py-3 px-4"></td> <!--Ini Buat Image-->
+                                    <td class="w-1/3 text-left py-3 px-4"></td> <!--Ini Buat Judul-->
+                                    <td class="w-1/3 text-left py-3 px-4"></td> <!--Ini Buat Deskripsi-->
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </main>
+    
             <footer class="w-full bg-white text-right p-4">
                 Built by Large Team
             </footer>

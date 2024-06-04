@@ -25,7 +25,6 @@ class HomeController extends Controller
         //     }
         // }
         $users = User::all();
-
         return view('admin.admin', compact('users'));
     }
 }

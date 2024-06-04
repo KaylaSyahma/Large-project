@@ -33,10 +33,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
-    Route::controller(DashboardController::class)->group(function(){
-        Route::get('/dashboard', 'index');
-    });
-});
+// Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
+//     Route::controller(DashboardController::class)->group(function(){
+//         Route::get('/dashboard', 'index');
+//     });
+// });
 
 require __DIR__.'/auth.php';

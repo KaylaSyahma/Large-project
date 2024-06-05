@@ -42,13 +42,12 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
         Route::get('/artikel', 'index')->name('admin.artikel');
     });
 
-    // Kategori Livewire
-    // Route::get('/kategori', App\Livewire\Admin\CategoryAdd::class)->name('admin.kategori');
 
     Route::controller(CategoryController::class)->group(function(){
         Route::get('kategori','index')->name('kategori.index');
-        Route::get('kategori/store','store')->name('kategori.store');
-        Route::get('kategori','index')->name('kategori.index');
+        Route::post('kategori/store','store')->name('kategori.store');
+        Route::put('kategori/update','update')->name('kategori.update');
+        Route::delete('kategori/delete','delete')->name('kategori.delete');
     });
 });
 

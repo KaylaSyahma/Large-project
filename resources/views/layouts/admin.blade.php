@@ -20,7 +20,9 @@
         .nav-item:hover { background: #FD7272; }
         .account-link:hover { background: #010101; }
     </style>
-     <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://unpkg.com/flowbite@1.6.0/dist/flowbite.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     @livewireStyles
 </head>
 <body class="bg-gray-100 font-family-karla flex">

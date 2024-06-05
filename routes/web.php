@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -18,14 +20,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.index');
 });
 
-Route::get('/dashboard', function () {
+Route::get('/dashboard/user', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::get('/home',[HomeController::class,'index']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -33,10 +33,23 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
-//     Route::controller(DashboardController::class)->group(function(){
-//         Route::get('/dashboard', 'index');
-//     });
-// });
+Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
+    Route::controller(HomeController::class)->group(function(){
+        Route::get('/dashboard', [HomeController::class, 'index'])->name('admin.dashboard');
+    });
+
+    Route::controller(ArtikelController::class)->group(function(){
+        Route::get('/artikel', 'index')->name('admin.artikel');
+    });
+
+    // Kategori Livewire
+    // Route::get('/kategori', App\Livewire\Admin\CategoryAdd::class)->name('admin.kategori');
+
+    Route::controller(CategoryController::class)->group(function(){
+        Route::get('kategori','index')->name('kategori.index');
+        Route::get('kategori/store','store')->name('kategori.store');
+        Route::get('kategori','index')->name('kategori.index');
+    });
+});
 
 require __DIR__.'/auth.php';

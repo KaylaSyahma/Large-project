@@ -1,5 +1,8 @@
 <!-- nav -->
   <!-- Main navigation container -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/tw-elements/css/tw-elements.min.css" />
   <nav
     class="relative flex w-full flex-wrap items-center justify-between bg-zinc-50 py-2 shadow-dark-mild dark:bg-neutral-700 lg:py-4"
     data-twe-navbar-ref>
@@ -49,3 +52,18 @@
     </div>
   </nav>
   <!-- nav -->
+  @push('scripts')
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <script
+  type="text/javascript"
+  src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+  <script>
+  import {
+    Collapse,
+    initTWE,
+  } from "tw-elements";
+  
+  initTWE({ Collapse });
+  </script>
+  @endpush

@@ -6,7 +6,7 @@
     <div class="flex w-full flex-wrap items-center justify-between px-3">
       <div>
         <a class="mx-4 my-1 flex items-center lg:mb-0 lg:mt-0" href="#">
-          <img class="me-2" src="../assets/images/logo.svg" style="height: 20px" alt="Large logo" loading="lazy" />
+          <img class="me-2" src="../assets/images/logo.svg" style="height: 30px" alt="Large logo" loading="lazy" />
         </a>
       </div>
 

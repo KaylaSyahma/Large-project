@@ -17,7 +17,7 @@
         Upload Foto Profile
       </a>
       <!-- Title -->
-      <a class="mb-2 text-xl font-bold tracking-wide text-neutral-800 dark:text-neutral-50 mt-3">
+      <a href="" class="mb-2 text-xl font-bold tracking-wide text-neutral-800 dark:text-neutral-50 mt-3">
         Nanti saja
       </a>
   

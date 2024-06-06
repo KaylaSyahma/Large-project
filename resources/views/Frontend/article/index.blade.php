@@ -3,8 +3,8 @@
 @section('content')
 
 
-<div class="flex flex-row z-1 pt-[5rem]">
-    <div class="lg:container container lg:w-[1054px] relative flex-1">
+<div class="flex flex-row z-1">
+    <div class="lg:container container lg:w-[1054px] relative flex-1 mt-[100px]">
         <h3 class="text-[#9B9B9B] lg:text-[32.24px] font-bold text-[35px]">Halo,</h3>
         <h1 class="text-[40px] lg:text-[50.07px] font-bold lg:mb-[33px] mb-[10px]">Kayla Syahma</h1>
 

@@ -11,6 +11,12 @@ export default {
     ],
 
     theme: {
+        container: {
+            padding: {
+              DEFAULT: '80px'
+            }
+          },
+          
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-
+<div class="w-screen items-center ">
 <div class="bg-white p-6 rounded-lg max-w-3xl w-full">
         <h1 class="text-4xl font-bold text-gray-900">Patung Kentang Raksasa Undang Wisatawan Luar Angkasa</h1>
         <div class="flex justify-between mt-2">
@@ -20,5 +20,7 @@
             <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores repudiandae aliquam molestiae. Fugiat aliquid ipsam ad ab fugit quidem porro repellat nesciunt earum ratione at, molestiae tempore tempora dignissimos rem officiis beatae hic placeat, doloremque ipsum eligendi saepe provident autem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia numquam est dolore rem, perspiciatis esse dolor magni iusto atque, consequuntur inventore veritatis facilis error ut unde explicabo aut! Repudiandae, pariatur!</article>
         </div>
     </div>
+</div>
+
 
 @endsection

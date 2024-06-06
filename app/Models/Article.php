@@ -12,10 +12,19 @@ class Article extends Model
     protected $fillable = [
         'judul',
         'slug',
-        'artikel'
+        'artikel',
+        'user_id'
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 
     public function articleImage(){
         return $this->belongsTo(ArticleImage::class, 'article_id', 'id');
+    }
+
+    public function category(){
+        return $this->belongsTo(Category::class, 'id');
     }
 }

@@ -22,19 +22,22 @@ class ArticleRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => [
-                'required',
-                'string'
-            ],
-            'slug' => [
-                'required',
-                'string'
-            ],
-            'artikel' => [
-                'required',
-                'string',
-                'max:500'
-            ],
+            'judul' => 'required|string',
+            'slug' => 'required|string',
+            'artikel' => 'required|string',
+            'image' => 'required|array',
+            'image.*' => 'mimes:jpg,jpeg,png,bmp|max:20000', // contoh validasi file
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'judul.required' => 'Judul harus diisi.',
+            'slug.required' => 'Slug harus diisi.',
+            'artikel.required' => 'Artikel harus diisi.',
+            'image.required' => 'File harus diupload.',
+            'image.*.mimes' => 'File harus berupa gambar dengan format jpg, jpeg, png, bmp.',
         ];
     }
 }

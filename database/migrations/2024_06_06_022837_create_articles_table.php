@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('slug');
             $table->longText('artikel')->nullable();
             $table->timestamps();
+
+            // $table->foreignId('user_id')->constrained()->onDelete('cascade');
         });
     }
 

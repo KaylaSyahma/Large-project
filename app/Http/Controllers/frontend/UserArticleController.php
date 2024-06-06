@@ -5,6 +5,7 @@ namespace App\Http\Controllers\frontend;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ArticleRequest;
 use App\Models\Article;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class UserArticleController extends Controller
@@ -18,25 +19,45 @@ class UserArticleController extends Controller
     }
 
     public function profile(){
-        return view('frontend.article.profile.profile');
+        $article = Article::all();
+        return view('frontend.article.profile.profile', compact('article'));
     }
 
     public function create(){
-        return view('frontend.article.profile.create');
+        $article = Article::all();
+        return view('frontend.article.profile.create', compact('article'));
+
+        
     }
 
     public function store(ArticleRequest $request){
         $validatedData = $request->validated();
 
-        $article = Article::all()->create([
+        $article = Article::create([
             'judul' => $validatedData['judul'],
-            'slug' => $validatedData['slug'],
+            'slug' => Str::slug($validatedData['slug']),
             'artikel' => $validatedData['artikel']
         ]);
 
         if($request->hasFile('image')){
             $uploadPath = 'upload/article/';
+
+            // ini untuk image pokoknya
+            $i = 1;
+            foreach ($request->file('image') as $imageFile) {
+                $extension  = $imageFile->getClientOriginalExtension();
+                $fileName = time() . $i++ . '.' . $extension;
+
+                $imageFile->move($uploadPath, $fileName);
+                $finalImagePathName = $uploadPath . $fileName;
+                $article->articleImage()->create([
+                    'article_id'    => $article->id,
+                    'image'         => $finalImagePathName,
+                ]);
+            }
         }
+
+        return redirect()->route('user-profile')->with('message', 'Selamat, Artikel Berhasil Ditambahkan!');
 
     }
 }

@@ -25,6 +25,10 @@ class UserArticleController extends Controller
         return view('frontend.article.profile.create');
     }
 
+    public function home(){
+        return view('frontend.homeuser');
+    }
+
     public function store(ArticleRequest $request){
         $validatedData = $request->validated();
 

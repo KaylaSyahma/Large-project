@@ -9,79 +9,36 @@
         <h1 class="text-[40px] lg:text-[50.07px] font-bold lg:mb-[33px] mb-[10px]">Kayla Syahma</h1>
 
         <hr class="border-[1.5px] mb-[30px]">
+        <div>
+            <a href="{{ route('article-detail') }}">
+                <div class="flex flex-col lg:flex-row lg:gap-[45px] mb-[40px]">
+                    <div class="flex-1">
+                        <h3 class="font-medium text-[17.55px] mb-[24px]">Chika Maharenong</h3>
+                        <h1 class="font-bold text-[20.358px] mb-[26px]">Patung Kentang Raksasa Undang Wisatawan Luar Angkasa</h1>
+                        <p class="text-[#707070] mb-[20px] lg:mb-[38px]">Di tengah hiruk-pikuk dunia yang penuh dengan berita politik dan bencana alam, sebuah kota kecil di Indonesia menjadi pusat perhatian internasional. Kota Kentang, yang terkenal dengan produksi kentangnya yang melimpah, kini memiliki daya tarik wisata yang sangat unik: Patung Kentang Raksasa.</p>
 
-        <a href="{{ route('article-detail') }}">
-            <div class="flex flex-col lg:flex-row lg:gap-[45px] mb-[40px]">
-                <div class="flex-1">
-                    <h3 class="font-medium text-[17.55px] mb-[24px]">Chika Maharenong</h3>
-                    <h1 class="font-bold text-[20.358px] mb-[26px]">Patung Kentang Raksasa Undang Wisatawan Luar Angkasa</h1>
-                    <p class="text-[#707070] mb-[20px] lg:mb-[38px]">Di tengah hiruk-pikuk dunia yang penuh dengan berita politik dan bencana alam, sebuah kota kecil di Indonesia menjadi pusat perhatian internasional. Kota Kentang, yang terkenal dengan produksi kentangnya yang melimpah, kini memiliki daya tarik wisata yang sangat unik: Patung Kentang Raksasa.</p>
+                        <div class="flex justify-between">
+                        <div class="inline-block pt-[5px] pb-[5px] pr-[21px] pl-[21px] bg-[#D9D9D9] rounded-[31px] mb-[15px] lg:mb-0">
+                            Topic
+                        </div>
 
-                    <div class="inline-block pt-[5px] pb-[5px] pr-[21px] pl-[21px] bg-[#D9D9D9] rounded-[31px] mb-[15px] lg:mb-0">
-                        Topic
+                        <div class="flex justify-between">
+                        <button class="mr-3 text-green-500"><i class="ri-pencil-line text-2xl"></i></button>
+                        <button class=" text-red-500"><i class="ri-delete-bin-line text-2xl"></i></button>
+                        </div>
+                        </div>
+                        
                     </div>
-                    <div class="flex justify-between">
 
-
-                    </div>
-                </div>
-
-                <div class="lg:w-[320px] w-full lg:h-auto h-full">
-                    <img src="../assets/Rectangle 19 (1).png" alt="" class="w-full h-full object-cover">
-                </div>
-            </div>
-        </a>
-        <hr class="border-[1.5px] mb-[30px]">
-        
-        <a href="{{ route('article-detail') }}">
-            <div class="flex flex-col lg:flex-row lg:gap-[45px] mb-[40px]">
-                <div class="flex-1">
-                    <h3 class="font-medium text-[17.55px] mb-[24px]">Chika Maharenong</h3>
-                    <h1 class="font-bold text-[20.358px] mb-[26px]">Patung Kentang Raksasa Undang Wisatawan Luar Angkasa</h1>
-                    <p class="text-[#707070] mb-[20px] lg:mb-[38px]">Di tengah hiruk-pikuk dunia yang penuh dengan berita politik dan bencana alam, sebuah kota kecil di Indonesia menjadi pusat perhatian internasional. Kota Kentang, yang terkenal dengan produksi kentangnya yang melimpah, kini memiliki daya tarik wisata yang sangat unik: Patung Kentang Raksasa.</p>
-
-                    <div class="inline-block pt-[5px] pb-[5px] pr-[21px] pl-[21px] bg-[#D9D9D9] rounded-[31px] mb-[15px] lg:mb-0">
-                        Topic
-                    </div>
-                    <div class="flex justify-between">
-
-
+                    <div class="lg:w-[320px] w-full lg:h-auto h-full">
+                        <img src="../assets/Rectangle 19 (1).png" alt="" class="w-full h-full object-cover">
                     </div>
                 </div>
-
-                <div class="lg:w-[320px] w-full lg:h-auto h-full">
-                    <img src="../assets/Rectangle 19 (1).png" alt="" class="w-full h-full object-cover">
-                </div>
-            </div>
-        </a>
-        <hr class="border-[1.5px] mb-[30px]">
-
-        <a href="{{ route('article-detail') }}">
-            <div class="flex flex-col lg:flex-row lg:gap-[45px] mb-[40px]">
-                <div class="flex-1">
-                    <h3 class="font-medium text-[17.55px] mb-[24px]">Chika Maharenong</h3>
-                    <h1 class="font-bold text-[20.358px] mb-[26px]">Patung Kentang Raksasa Undang Wisatawan Luar Angkasa</h1>
-                    <p class="text-[#707070] mb-[20px] lg:mb-[38px]">Di tengah hiruk-pikuk dunia yang penuh dengan berita politik dan bencana alam, sebuah kota kecil di Indonesia menjadi pusat perhatian internasional. Kota Kentang, yang terkenal dengan produksi kentangnya yang melimpah, kini memiliki daya tarik wisata yang sangat unik: Patung Kentang Raksasa.</p>
-
-                    <div class="inline-block pt-[5px] pb-[5px] pr-[21px] pl-[21px] bg-[#D9D9D9] rounded-[31px] mb-[15px] lg:mb-0">
-                        Topic
-                    </div>
-                    <div class="flex justify-between">
-
-
-                    </div>
-                </div>
-
-                <div class="lg:w-[320px] w-full lg:h-auto h-full">
-                    <img src="../assets/Rectangle 19 (1).png" alt="" class="w-full h-full object-cover">
-                </div>
-            </div>
-        </a>
-        <hr class="border-[1.5px] mb-[30px]">
+            </a>
+            <hr class="border-[1.5px] mb-[30px]">
+        </div>
     </div>
     @include('layouts.user.sidebar')
-
-    
 </div>
 
 <!-- Modal -->

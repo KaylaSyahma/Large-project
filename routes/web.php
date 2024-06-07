@@ -35,6 +35,7 @@ Route::controller(UserArticleController::class)->group(function(){
     Route::get('user/article/profile', 'profile')->name('user-profile');
     Route::get('user/create', 'create')->name('create');
     Route::post('user/article/store', 'store')->name('user-store');
+    Route::get('user/article/edit/{id}', 'edit')->name('article-edit');
 
     Route::get('user/home', 'home')->name('home');
 

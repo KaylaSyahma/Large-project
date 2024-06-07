@@ -20,9 +20,9 @@
 </head>
 
 <body>
-    <div class="container pt-[50px]">
+    <div class="container pt-[100px]">
         <h1 class="text-[49.374px] font-bold lg:mb-[40px]">Tulis Artikel</h1>
-        <form class="flex flex-col h-full" action="{{route('user-store')}}" method="POST" enctype="multipart/form-data">
+        <form class="flex flex-col h-full" method="POST" action="{{route('user-store')}}"  enctype="multipart/form-data">
             @csrf
             <div class="flex flex-wrap lg:flex-nowrap space-y-4 lg:space-y-0 lg:gap-x-[120px] mb-8">
                 <div class="w-full lg:w-1/2 lg:mr-8">
@@ -64,8 +64,8 @@
             </div>
 
             <div class="flex justify-end mt-auto">
-                <a href="{{route('user-profile')}}" type="button" class="text-[#FC813B] transition-colors duration-200 hover:text-white border-[3px] border-[#FC813B] hover:bg-[#FC813B]  focus:outline-none focus:ring-[#FC813B] font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2">Kembali</a>
-                <a href="{{route('user-store')}}" type="submit" class="text-white transition-colors duration-200 bg-yellow-400 hover:bg-yellow-500 focus:outline-none  focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-3 text-center me-2 mb-2">Upload Artikel</a>
+                <button type="submit" class="text-[#FC813B] transition-colors duration-200 hover:text-white border-[3px] border-[#FC813B] hover:bg-[#FC813B]  focus:outline-none focus:ring-[#FC813B] font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2">Kembali</button>
+                <button  type="submit" class="text-white transition-colors duration-200 bg-yellow-400 hover:bg-yellow-500 focus:outline-none  focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-3 text-center me-2 mb-2">Upload Artikel</button>
             </div>
         </form>
     </div>

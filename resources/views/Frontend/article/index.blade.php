@@ -21,7 +21,7 @@
                     <div class="flex-1">
                         <h3 class="font-medium text-[17.55px] mb-[24px]">{{ $article->user->name }}</h3>
                         <h1 class="font-bold text-[20.358px] mb-[26px]">{{ $article->judul }}</h1>
-                        <p class="text-[#707070] mb-[20px] lg:mb-[38px]">{{ $article->artikel }}</p>
+                        <p class="text-[#707070] mb-[20px] lg:mb-[38px]">{{ substr($article->artikel, 0, 200) }}{{ strlen($article->artikel) > 200? '...' : '' }}</p>
 
                         <div class="flex justify-between">
                             <div class="inline-block pt-[5px] pb-[5px] pr-[21px] pl-[21px] bg-[#D9D9D9] rounded-[31px] mb-[15px] lg:mb-0">
@@ -39,11 +39,13 @@
                     </div>
                     <div class="lg:w-[320px] w-full lg:h-auto h-full">
                         @if($article->articleImage->isNotEmpty())
-                            @foreach($article->articleImage as $image)
-                                <img src="{{ asset($image->image) }}" alt="" class="w-full h-full object-cover rounded-lg mb-2">
-                            @endforeach
+                        @foreach($article->articleImage as $image)
+                        <div class="" style="width: 300px; height: 300px">
+                            <img src="{{ asset($image->image) }}" alt="" class="h-full w-full object-cover rounded-lg">
+                        </div>
+                        @endforeach
                         @else
-                            <img src="../assets/images/Rectangle 19 (1).png" alt="" class="w-full h-full object-cover rounded-lg">
+                        <img src="../assets/images/Rectangle 19 (1).png" alt="" class="w-full h-full object-cover rounded-lg">
                         @endif
                     </div>
                 </div>

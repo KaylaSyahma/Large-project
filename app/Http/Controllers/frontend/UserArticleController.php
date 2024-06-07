@@ -68,4 +68,10 @@ class UserArticleController extends Controller
         return redirect()->route('user-profile')->with('message', 'Selamat, Artikel Berhasil Ditambahkan!');
 
     }
+
+    // public function edit($id){
+    //     $article = Article::findOrFail($id);
+
+    //     return view('admin.products')
+    // }
 }

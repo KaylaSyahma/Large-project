@@ -8,7 +8,7 @@
           <h6 class="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
             <div>
               <a class="mx-2 my-1 flex items-center lg:mb-0 lg:mt-0" href="#">
-                <img class="me-2" src="../assets/images/black-logo.svg" style="height: 30px" alt="Large logo" loading="lazy" />
+                <img class="me-2" src="{{ asset('assets/images/black-logo.svg') }}" style="height: 30px" alt="Large logo" loading="lazy" />
               </a>
             </div>
           </h6>

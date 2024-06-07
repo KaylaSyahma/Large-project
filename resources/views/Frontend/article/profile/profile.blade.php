@@ -4,8 +4,8 @@
 <!-- Card -->
 <div class="Card rounded-3xl bg-custom-bg shadow-custom2 dark:bg-neutral-700 text-center flex flex-col items-center">
     <!-- Card image -->
-    <a href="#!">
-      <img class="rounded-t-3xl mt-6" src="../assets/images/profile.svg" />
+    <a href="#!" class="mt-[100px]">
+    <img class="rounded-t-3xl mt-6" src="{{ asset('assets/images/profile.svg') }}" />
     </a>
   
     <!-- Card body -->
@@ -18,7 +18,7 @@
       </a>
       <!-- Title -->
       <a href="{{route('article')}}" class="mb-2 text-xl font-bold tracking-wide text-neutral-800 dark:text-neutral-50 mt-3">
-        Nanti saja
+        Cancel
       </a>
   
     </div>

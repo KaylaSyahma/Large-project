@@ -4,7 +4,7 @@
 <!-- Card -->
 <div class="Card rounded-3xl bg-custom-bg shadow-custom2 dark:bg-neutral-700 text-center flex flex-col items-center">
     <!-- Card image -->
-    <a href="#!">
+    <a href="#!" class="mt-[100px]">
       <img class="rounded-t-3xl mt-6" src="../assets/images/profile.svg" />
     </a>
   

@@ -5,6 +5,7 @@ use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\frontend\UserArticleController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HomeuserController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,10 +31,13 @@ Route::get('/dashboard/user', function () {
 
 Route::controller(UserArticleController::class)->group(function(){
     Route::get('user/article', 'index')->name('article');
-    Route::get('user/article.detail', 'detail')->name('article-detail');
+    Route::get('user/article/detail/{id}', 'detail')->name('article-detail');
     Route::get('user/article/profile', 'profile')->name('user-profile');
-    Route::get('user/article/create', 'create')->name('create');
+    Route::get('user/create', 'create')->name('create');
     Route::post('user/article/store', 'store')->name('user-store');
+
+    Route::get('user/home', 'home')->name('home');
+
 });
 
 Route::middleware('auth')->group(function () {

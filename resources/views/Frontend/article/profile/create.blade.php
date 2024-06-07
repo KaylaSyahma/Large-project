@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,10 +65,11 @@
 
             <div class="flex justify-end mt-auto">
                 <a href="{{route('user-profile')}}" type="button" class="text-[#FC813B] transition-colors duration-200 hover:text-white border-[3px] border-[#FC813B] hover:bg-[#FC813B]  focus:outline-none focus:ring-[#FC813B] font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2">Kembali</a>
-                <button type="submit" class="text-white transition-colors duration-200 bg-yellow-400 hover:bg-yellow-500 focus:outline-none  focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-3 text-center me-2 mb-2">Upload Artikel</button>
+                <a href="{{route('user-store')}}" type="submit" class="text-white transition-colors duration-200 bg-yellow-400 hover:bg-yellow-500 focus:outline-none  focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-3 text-center me-2 mb-2">Upload Artikel</a>
             </div>
         </form>
     </div>
 </body>
 
 </html>
+@endsection

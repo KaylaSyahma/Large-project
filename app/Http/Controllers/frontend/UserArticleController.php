@@ -5,29 +5,37 @@ namespace App\Http\Controllers\frontend;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ArticleRequest;
 use App\Models\Article;
+use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class UserArticleController extends Controller
 {
     public function index() {
-        return view('frontend.article.index');
+        $user = auth()->user();
+        $articles = Article::with('articleImage')->get();
+        return view('frontend.article.index', compact('articles', 'user'));
     }
 
-    public function detail(){
-        return view('frontend.article.detail');
+    public function detail($id){
+        $artikel = Article::findOrFail($id);
+        return view('frontend.article.detail', compact('artikel'));
     }
-
+    
     public function profile(){
-        $article = Article::all();
-        return view('frontend.article.profile.profile', compact('article'));
+        $articles = Article::all();
+        $user = auth()->user(); // Mengambil data pengguna yang sedang login
+        return view('frontend.article.profile.profile', compact('articles', 'user'));
     }
-
     public function create(){
         $article = Article::all();
         return view('frontend.article.profile.create', compact('article'));
 
         
+    }
+
+    public function home(){
+        return view('frontend.homeuser');
     }
 
     public function store(ArticleRequest $request){
